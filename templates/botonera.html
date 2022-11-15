@@ -1,0 +1,13 @@
+{% load static %}
+<header>
+<div class="boton reg"><a href="{% url 'registro' %}">REGISTRAR</a></div>
+<div class="boton reg"><a href="{% url 'registromascotas' %}">REGISTRAR</a></div>
+</header>
+<header>
+    <div class="boton act"><a href="{% url 'verPersonas' %}">ACTUALIZAR</a></div>
+    <div class="boton act"><a href="{% url 'verMascotas' %}">ACTUALIZAR</a></div>
+</header>
+<header>
+        <div class="boton del"><a href="{% url 'verPersonas' %}">ELIMINAR</a></div>
+        <div class="boton del"><a href="{% url 'verMascotas' %}">ELIMINAR</a></div>
+</header>

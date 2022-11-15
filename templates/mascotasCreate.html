@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block 'title' %} Registro mascotas {% endblock  %}
+
+{% block 'main' %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" value="Enviar" class="btn btn-success form-controli">
+</form>
+<a href="{% url 'index' %}">Volver</a>
+{% endblock  %}

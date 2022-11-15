@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block 'title' %}Detalle Mascotas{% endblock  %}
+
+{% block 'main' %}
+<table class="table">
+    <tr>
+        <th scope="col" >Persona</th>
+        <th scope="col" >Nombre</th>
+        <th scope="col" >Apellidos</th>
+        <th scope="col" >Especie</th>
+        <th scope="col" >Color</th>
+        <th scope="col" >Edad</th>
+        <th scope="col" >Decendencia</th>
+        <th scope="col" >Enfermedades</th>
+        <th scope="col" >Cirugias</th>
+        <th scope="col" ></th>
+        <th scope="col" ></th>
+    </tr>
+    {% for pet in mascotas %}
+    <tr>
+        <th scope="col" >{{pet.persona}}</th>
+        <th scope="col" >{{pet.nombre}}</th>
+        <th scope="col" >{{pet.apellidos}}</th>
+        <th scope="col" >{{pet.especie}}</th>
+        <th scope="col" >{{pet.color}}</th>
+        <th scope="col" >{{pet.edad}}</th>
+        <th scope="col" >{{pet.decendencia}}</th>
+        <th scope="col" >{{pet.enfermedades}}</th>
+        <th scope="col" >{{pet.cirugias}}</th>
+        <th scope="col" ><a href='{% url 'editarMascota' id=pet.id %}'>Actualizar</a></th>
+        <th scope="col" ><a href='{% url 'borrarMascota' id=pet.id %}'>Eliminar</a></th>
+    </tr>
+    {% endfor %}
+
+</table>
+<a href="{% url 'registromascotas' %}">Registro Mascotas || </a>
+<a href="{% url 'index' %}"> Volver</a>
+
+{% endblock  %}

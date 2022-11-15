@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block 'title' %}Detalle Personas{% endblock  %}
+
+{% block 'main' %}
+<table class="table">
+    <tr>
+        <th scope="col" >Nombre</th>
+        <th scope="col" >Apellidos</th>
+        <th scope="col" >Genero</th>
+        <th scope="col" >ID</th>
+        <th scope="col" >Correo</th>
+        <th scope="col" >Telefono</th>
+        <th scope="col" >Celular</th>
+        <th scope="col" >Direccion</th>
+        <th scope="col" >Ciudad</th>
+        <th scope="col" ></th>
+        <th scope="col" ></th>
+    </tr>
+    {% for person in personas %}
+    <tr>
+        <th scope="col" >{{person.nombre}}</th>
+        <th scope="col" >{{person.apellido}}</th>
+        <th scope="col" >{{person.genero}}</th>
+        <th scope="col" >{{person.identificacion}}</th>
+        <th scope="col" >{{person.correo}}</th>
+        <th scope="col" >{{person.telefono}}</th>
+        <th scope="col" >{{person.mobil}}</th>
+        <th scope="col" >{{person.direccion}}</th>
+        <th scope="col" >{{person.ciudad}}</th>
+        <th scope="col" ><a href='{% url 'editar' id=person.id %}'>Actualizar</a></th>
+        <th scope="col" ><a href='{% url 'borrar' id=person.id %}'>Eliminar</a></th>
+    </tr>
+    {% endfor %}
+
+</table>
+<a href="{% url 'registro' %}">Registro Personas || </a>
+<a href="{% url 'index' %}"> Volver</a>
+
+{% endblock  %}
