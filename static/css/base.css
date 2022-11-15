@@ -1,5 +1,5 @@
 *{
-    background-color: gray;
+    background-color: rgb(187, 182, 182);
     margin: 0;
     padding: 0;
 }
@@ -76,17 +76,22 @@ form{
 
 .reg, .reg a{
     background-color: green;
+    border-radius: 100%;
 }
 
 .act, .act a{
     background-color: blue;
+    border-radius: 100%;
 }
 
 .del, .del a{
     background-color: red;
+    border-radius: 100%;
 }
 
 body a {
     color: white;
     text-decoration: none;
+    font-size: large;
+    font-weight: bolder;
 }
